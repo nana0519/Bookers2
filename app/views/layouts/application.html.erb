@@ -67,9 +67,13 @@
           </div>
         </div>
       </nav>
-
     </header>
     <main>
+      <% flash.each do |key, value| %>
+       <p class="text-success">
+         <%= value %>
+       </p>
+      <% end %>
       <%= yield %>
     </main>
     <footer>
